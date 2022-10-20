@@ -5,15 +5,16 @@ import DaoCreate from "@newstackdev/iosdk/dist/Pages/Dao/Views/DaoCreate/DaoCrea
 
 export const Home = () => {
     const state = useAppState();
+    const user:string = state.api!.auth!.user!.username!;
     return <div>
-        {
-            state.newcoin &&  <ProposalsPage />
-        }
         {
             !state.api?.auth?.user?.id && <NewsafeAuth />
         }
         {
-            !state.api?.auth?.user?.id && !state.newcoin.daos &&  <DaoCreate />
+            state.api?.auth?.user?.id && state.newcoin.daos[user] &&  <ProposalsPage />
+        }
+        {
+            state.api?.auth?.user?.id && !state.newcoin.daos[user] &&  <DaoCreate />
         }
     </div>;
 };

@@ -18,8 +18,9 @@ export const App: NLView = () => {
         <Nav/>
       <Router>
         <Switch>
-            <Route key="h" exact path="/home" component={Home} />
-            <Route key="h" exact path="/dao/:daoOwner/new-proposal" component={NewProposal} />
+            <Route key="h" exact path="/" component={Home} />
+            <Route key="hi" exact path="/home" component={Home} />
+            <Route key="hj" exact path="/dao/:daoOwner/new-proposal" component={NewProposal} />
             <Route key="da" exact path="/dao/:daoOwner/proposal/:id" component={ViewProposalPage} />,
             <Route key="db" exact path="/dao/:daoOwner/member-proposal/:id" component={ViewWhitelistProposalPage} />,
             <Route key="dc" exact path="/dao/:daoOwner/proposals/:type?" component={ProposalsPage} />,
