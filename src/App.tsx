@@ -7,7 +7,7 @@ import {ViewProposalPage} from "@newstackdev/iosdk/dist/Pages/Dao/Views/Proposal
 import { ViewWhitelistProposalPage} from "@newstackdev/iosdk/dist/Pages/Dao/Views/WhitelistProposalView/ViewWhitelistProposal";
 import {ProposalsPage} from "@newstackdev/iosdk/dist/Pages/Dao/Views/Proposals/ProposalList";
 import NewProposal from "@newstackdev/iosdk/dist/Pages/Dao/Views/NewProposal/NewProposal";
-import './index.less'
+import "./styles/Dao.less"
 import Nav from "./components/Nav";
 
 const om = overmind();
