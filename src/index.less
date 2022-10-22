@@ -51,14 +51,17 @@ a,p,h1,h2,h3,h4,h5,span.a, input, .ant-select-selection-item, .ant-form-item{
   color:black;
 }
 
-textarea {
-  .ant-input {
-    border: solid red 2px;
-  }
+ textarea.ant-input {
+  border: solid black 1px !important;
 }
 
-#new-proposal-form_summary {
-  border: solid red 2px !important;
+.ant-input::placeholder {
+  color: black !important;
+  opacity: 100;
+}
+
+.ant-col.view-proposal-summary-p {
+  background-color: whitesmoke;
 }
 
 
@@ -101,8 +104,24 @@ body {
 
   @media screen and (max-width: 719px) {
     font-size: 0.9em;
-    primary-color: #b3ff00;
+    primary-color: @primary;
   }
+}
+
+.ant-modal {
+  a,p,h1,h2,h3,h4,h5,span.a, input, .ant-select-selection-item, .ant-form-item{
+    color:black;
+  }
+}
+
+.confirm-btn {
+  color: black !important;
+  background-color: whitesmoke !important;
+}
+
+.cancel-btn {
+  color: white !important;
+  background-color: black !important;
 }
 
 header {
@@ -740,7 +759,6 @@ textarea::placeholder {
 
 textarea {
   border: 1px solid @secondary !important;
-  border: 2px solid @offwhite !important;
   resize: none !important;
 }
 
